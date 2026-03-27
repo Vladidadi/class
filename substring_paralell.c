@@ -52,6 +52,7 @@ void* num_substring_thread(void* arg)
 	int* i;
     i=((int* )arg);
 	int j=n2;
+    int* return_val;
 	for (int k=0;k<j;k++){
         if(*(s1+*i+k)!=*(s2+k)){
 			break;
@@ -60,10 +61,11 @@ void* num_substring_thread(void* arg)
 		}
 	}
 	if (count==n2){
-		return (int*) 1;
+		return_val= 1;
 	}else{
-		return (int*)  0;
+		return_val= 0;
 	}
+    return return_val;
 	// for (i = 0; i <= (n1-n2); i++){   
 	// 	count=0;
 	// 	for(j = i,k = 0; k < n2; j++,k++){  /*search for the next string of size of n2*/  
