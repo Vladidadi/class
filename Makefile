@@ -5,4 +5,7 @@ sequential:
 	gcc substring_sequential.c -o sequential
 
 paralell:
-	gcc substring_paralell.c -o paralell 
+	gcc substring_paralell.c -o paralell; chmod +x paralell; ./paralell
+
+clean:
+	rm sequential paralell list-forming
