@@ -5,7 +5,10 @@ sequential:
 	gcc substring_sequential.c -o sequential
 
 paralell:
-	gcc -g substring_paralell.c -o paralell; chmod +x paralell; ./paralell ; git add . ; git commit -C project3; git push
+	gcc -g substring_paralell.c -o paralell; chmod +x paralell; ./paralell 
+
+push:
+	 git add . ; git commit -C project3; git push
 
 clean:
 	rm sequential paralell list-forming
