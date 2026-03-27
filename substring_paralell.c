@@ -9,6 +9,7 @@
 #include <sys/time.h>
 #include <sys/param.h>
 #include <sched.h>
+#include <stdint.h>
 
 #define MAX 1024
 
@@ -48,19 +49,20 @@ void* num_substring_thread(void* arg)
 {
 	// int i,j,k;
 	int count;
-	int i=(int*)arg;
+	int* i;
+    i=((int* )arg);
 	int j=n2;
 	for (int k=0;k<j;k++){
-        if(*(s1+i+k)!=s2+k){
+        if(*(s1+*i+k)!=*(s2+k)){
 			break;
 		}else{
 			count++;
 		}
 	}
 	if (count==n2){
-		return 1;
+		return (int*) 1;
 	}else{
-		return 0;
+		return (int*)  0;
 	}
 	// for (i = 0; i <= (n1-n2); i++){   
 	// 	count=0;
@@ -75,7 +77,7 @@ void* num_substring_thread(void* arg)
 	// 	}
 	// }
 	
-	return total;
+	// return total;
 }
 
 
@@ -139,7 +141,7 @@ int main(int argc, char *argv[])
         {
             pthread_join(substring_worker[i],&worker_return);
         }
-		total+=(int)worker_return;
+		total+=*((int*)worker_return);
     }
 
 

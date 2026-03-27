@@ -58,88 +58,88 @@ int num_substring(void)
 
 int main(int argc, char *argv[])
 {
-	// int count;
+	int count;
  
-	// readf(fp);
-	// count = num_substring();
- 	// printf("The number of substrings is: %d\n", count);
-	// return 1;
-	   int i, num_threads;
+	readf(fp);
+	count = num_substring();
+ 	printf("The number of substrings is: %d\n", count);
+	return 1;
+	//    int i, num_threads;
 
-    int NUM_PROCS;//number of CPU
-    int* cpu_array = NULL;
+    // int NUM_PROCS;//number of CPU
+    // int* cpu_array = NULL;
 
-    struct Node  *tmp,*next;
-    struct timeval starttime, endtime;
+    // struct Node  *tmp,*next;
+    // struct timeval starttime, endtime;
 
-    if(argc == 1){
-        printf("ERROR: please provide an input arg (the number of threads)\n");
-        exit(1);
-    }
-
-    num_threads = atoi(argv[1]); //read num_threads from user
-    pthread_t producer[num_threads];
-    NUM_PROCS = sysconf(_SC_NPROCESSORS_CONF);//get number of CPU
-    if( NUM_PROCS > 0)
-    {
-        cpu_array = (int *)malloc(NUM_PROCS*sizeof(int));
-        if( cpu_array == NULL )
-        {
-            printf("Allocation failed!\n");
-            exit(0);
-        }
-        else
-        {
-            for( i = 0; i < NUM_PROCS; i++)
-               cpu_array[i] = i;
-        }
-
-    }
-
-    pthread_mutex_init(&mutex_lock, NULL);
-
-    // List = (struct list *)malloc(sizeof(struct list));
-    // if( NULL == List )
-    // {
-    //    printf("End here\n");
-    //    exit(0);	
-    // }
-    // List->header = List->tail = NULL;
-
-    // gettimeofday(&starttime,NULL); //ge//t program start time
-    for( i = 0; i < num_threads; i++ )
-    {
-        pthread_create(&(producer[i]), NULL, (void *) producer_thread, &cpu_array[i%NUM_PROCS]); 
-    }
-
-
-    for( i = 0; i < num_threads; i++ )
-    {
-        if(producer[i] != 0)
-        {
-            pthread_join(producer[i],NULL);
-        }
-    }
-
-
-    // gettimeofday(&endtime,NULL); //get the finish time
-
-    // if( List->header != NULL )
-    // {
-    //     next = tmp = List->header;
-    //     while( tmp != NULL )
-    //     {  
-    //        next = tmp->next;
-    //        free(tmp);
-    //        tmp = next;
-    //     }            
+    // if(argc == 1){
+    //     printf("ERROR: please provide an input arg (the number of threads)\n");
+    //     exit(1);
     // }
 
-    if( cpu_array!= NULL)
-       free(cpu_array);
-    /* calculate program runtime */
-    // printf("Total run time is %ld microseconds.\n", (endtime.tv_sec-starttime.tv_sec) * 1000000+(endtime.tv_usec-starttime.tv_usec));
-    return 0; 
+    // num_threads = atoi(argv[1]); //read num_threads from user
+    // pthread_t producer[num_threads];
+    // NUM_PROCS = sysconf(_SC_NPROCESSORS_CONF);//get number of CPU
+    // if( NUM_PROCS > 0)
+    // {
+    //     cpu_array = (int *)malloc(NUM_PROCS*sizeof(int));
+    //     if( cpu_array == NULL )
+    //     {
+    //         printf("Allocation failed!\n");
+    //         exit(0);
+    //     }
+    //     else
+    //     {
+    //         for( i = 0; i < NUM_PROCS; i++)
+    //            cpu_array[i] = i;
+    //     }
+
+    // }
+
+    // pthread_mutex_init(&mutex_lock, NULL);
+
+    // // List = (struct list *)malloc(sizeof(struct list));
+    // // if( NULL == List )
+    // // {
+    // //    printf("End here\n");
+    // //    exit(0);	
+    // // }
+    // // List->header = List->tail = NULL;
+
+    // // gettimeofday(&starttime,NULL); //ge//t program start time
+    // for( i = 0; i < num_threads; i++ )
+    // {
+    //     pthread_create(&(producer[i]), NULL, (void *) producer_thread, &cpu_array[i%NUM_PROCS]); 
+    // }
+
+
+    // for( i = 0; i < num_threads; i++ )
+    // {
+    //     if(producer[i] != 0)
+    //     {
+    //         pthread_join(producer[i],NULL);
+    //     }
+    // }
+
+
+    // // gettimeofday(&endtime,NULL); //get the finish time
+
+    // // if( List->header != NULL )
+    // // {
+    // //     next = tmp = List->header;
+    // //     while( tmp != NULL )
+    // //     {  
+    // //        next = tmp->next;
+    // //        free(tmp);
+    // //        tmp = next;
+    // //     }            
+    // // }
+
+    // if( cpu_array!= NULL)
+    //    free(cpu_array);
+    // /* calculate program runtime */
+    // // printf("Total run time is %ld microseconds.\n", (endtime.tv_sec-starttime.tv_sec) * 1000000+(endtime.tv_usec-starttime.tv_usec));
+    // return 0; 
 }
 
 
