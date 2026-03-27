@@ -85,6 +85,7 @@ int main(int argc, char *argv[])
 {
 	int num_threads,i;
 	int total=0;
+    readf(fp);
 
 
     int NUM_PROCS;//number of CPU
