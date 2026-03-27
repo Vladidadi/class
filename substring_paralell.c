@@ -61,9 +61,9 @@ void* num_substring_thread(void* arg)
 		}
 	}
 	if (count==n2){
-		return_val= 1;
+		return_val= (int*)1;
 	}else{
-		return_val= 0;
+		return_val= (int*)0;
 	}
     return return_val;
 	// for (i = 0; i <= (n1-n2); i++){   
