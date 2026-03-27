@@ -136,15 +136,17 @@ int main(int argc, char *argv[])
     {
         pthread_create(&(substring_worker[i]), NULL, (void *) num_substring_thread, &i); 
     }
-
+		void* worker_return;
+        int* substring_found;
     for( i = 0; i < num_threads; i++ )
     {
-		void* worker_return;
+
         if(substring_worker[i] != 0)
         {
             pthread_join(substring_worker[i],&worker_return);
         }
-		total+=*((int*)worker_return);
+        substring_found=(int*)worker_return;
+		total+=*substring_found;
     }
 
 
