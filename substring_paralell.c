@@ -138,6 +138,7 @@ int main(int argc, char *argv[])
     }
 		void* worker_return;
         int* substring_found;
+        int ptoi;
     for( i = 0; i < num_threads; i++ )
     {
 
@@ -146,7 +147,9 @@ int main(int argc, char *argv[])
             pthread_join(substring_worker[i],&worker_return);
         }
         substring_found=(int*)worker_return;
-		total+=*substring_found;
+        
+        ptoi=*substring_found;
+		total+=ptoi;
     }
 
 
