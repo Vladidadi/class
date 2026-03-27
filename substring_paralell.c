@@ -53,6 +53,7 @@ void* num_substring_thread(void* arg)
     i=((int* )arg);
 	int j=n2;
     int* return_val;
+    int return_temp;
 	for (int k=0;k<j;k++){
         if(*(s1+*i+k)!=*(s2+k)){
 			break;
@@ -61,10 +62,11 @@ void* num_substring_thread(void* arg)
 		}
 	}
 	if (count==n2){
-		return_val= (int*)1;
+		return_temp= 1;
 	}else{
-		return_val= (int*)0;
+		return_temp= 0;
 	}
+    return_val=&return_temp;
     return return_val;
 	// for (i = 0; i <= (n1-n2); i++){   
 	// 	count=0;
