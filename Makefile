@@ -10,5 +10,7 @@ paralell:
 push:
 	 git add . ; git commit -C project3; git push
 
+pc:
+	gcc -I . -g producer_consumer.c pcbuffer.c -o pc
 clean:
-	rm sequential paralell list-forming
+	rm sequential paralell list-forming pc

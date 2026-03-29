@@ -45,15 +45,56 @@ int readf(FILE *fp)
 }
 // void * substring_worker_thread( void *arg)
 // {
+// void* num_substring_thread(void* arg)
+// {
+// 	// int i,j,k;
+// 	int count=0;
+// 	int* i;
+//     i=((int* )arg);
+// 	int j=n2;
+//     int* return_val;
+//     int return_temp;
+// 	for (int k=0;k<j;k++){
+//         if(*(s1+*i+k)!=*(s2+k)){
+// 			break;
+// 		}else{
+// 			count++;
+// 		}
+// 	}
+// 	if (count==n2){
+// 		return_temp= 1;
+// 	}else{
+// 		return_temp= 0;
+// 	}
+//     return_val=&return_temp;
+//     printf("\nReturning %d, at location %p and temp var at %p",*return_val,return_val,return_temp);
+//     return return_val;
+// 	// for (i = 0; i <= (n1-n2); i++){   
+// 	// 	count=0;
+// 	// 	for(j = i,k = 0; k < n2; j++,k++){  /*search for the next string of size of n2*/  
+// 	// 		if (*(s1+j)!=*(s2+k)){
+// 	// 			break;
+// 	// 		}
+// 	// 		else
+// 	// 			count++;
+// 	// 		if(count==n2)    
+// 	// 			total++;		/*find a substring in this step*/                          
+// 	// 	}
+// 	// }
+	
+// 	// return total;
+// }
+
 void* num_substring_thread(void* arg)
 {
 	// int i,j,k;
-	int count;
+	int count=0;
 	int* i;
     i=((int* )arg);
 	int j=n2;
-    int* return_val;
-    int return_temp;
+    // int* return_val;
+    int *persistent_return_ptr=malloc(sizeof(int));
+    // int* return_temp;
 	for (int k=0;k<j;k++){
         if(*(s1+*i+k)!=*(s2+k)){
 			break;
@@ -62,12 +103,13 @@ void* num_substring_thread(void* arg)
 		}
 	}
 	if (count==n2){
-		return_temp= 1;
+		*persistent_return_ptr= 1;
 	}else{
-		return_temp= 0;
+		*persistent_return_ptr= 0;
 	}
-    return_val=&return_temp;
-    return return_val;
+    // return_val=&return_temp;
+    // printf("\nReturning %d, at location %p and temp var at %p",*return_val,return_val,return_temp);
+    return persistent_return_ptr;
 	// for (i = 0; i <= (n1-n2); i++){   
 	// 	count=0;
 	// 	for(j = i,k = 0; k < n2; j++,k++){  /*search for the next string of size of n2*/  
@@ -149,9 +191,10 @@ int main(int argc, char *argv[])
             pthread_join(substring_worker[i],&worker_return);
         }
         substring_found=(int*)worker_return;
-        
+        printf("\nsubstring found: %p,%d",substring_found,*substring_found);
         ptoi=*substring_found;
 		total+=ptoi;
+        free(worker_return);
     }
 
 
