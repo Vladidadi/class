@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/pc",
+            "program": "${workspaceFolder}/list-forming",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
