@@ -40,7 +40,7 @@ MODULE_PARM_DESC(pid_arg, "The PID of the process whose information you'd like t
 
    for_each_process(iter){
       if(iter->pid==pid_arg){
-   //  printk(KERN_INFO "\n======================\n\nWE FOUND HIM\n\n======================\n");
+    printk(KERN_INFO "\n======================\n\nWE FOUND HIM\n\n======================\n");
 
          print_loop(iter);
          found=1;
