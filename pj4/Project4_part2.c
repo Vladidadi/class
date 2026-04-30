@@ -84,7 +84,7 @@ bool query_in_range=0;
 
 
 
-   return query_in_range;
+   return 0;
    }
    
    void cleanup_module(void)
