@@ -1,9 +1,20 @@
 //Vladislav Vitamer
-  #include <linux/kernel.h>
-  #include <linux/sched.h>
-  #include <linux/module.h>
+   #include <linux/kernel.h>
+   #include <linux/sched.h>
+   #include <linux/module.h>
+   #include <linux/mm.h>
+   // #include -isystem "/usr/src/linux-headers-6.17.0-22-generic/include"
+   // #include <linux/mm.h>
+
+//   #include <linux/mm_types.h>
  
   static int pid_arg =1;
+
+//   struct mm_struct *mm = get_task_mm(task);
+  struct vm_area_struct *vma;
+  unsigned long vm_space =0;
+  struct vma_iterator iter;
+
 
   module_param(pid_arg, int, 0);
 MODULE_PARM_DESC(pid_arg, "The PID of the process whose information you'd like to see");
@@ -13,21 +24,29 @@ MODULE_PARM_DESC(pid_arg, "The PID of the process whose information you'd like t
    printk(KERN_INFO "Entered loop in part3");
 
        char *print_state;
-  for(task=ts;task!=&init_task;task=task->parent)
+   VMA_ITERATOR(iter,task->mm,0);
+  for_each_vma(iter,vma){
+   printk(KERN_INFO "heres a vma: %s\n",vma);
 
-   {
-   switch(task->__state){
-    case 0:
-    print_state=    "TASK_RUNNING"   ;
-    break;
-    case 1:
-    print_state= "TASK_INTERRUPTIBLE" ;
-    break;
-    default:
-    print_state="error";
-   }
-   printk(KERN_INFO "heres a task named %s with PID [%d] whose state is %s\n",task->comm , task->pid,print_state);
-   }
+  }
+//   for(task=ts;task!=&init_task;task=task->parent)
+
+//    {
+//    switch(task->__state){
+//     case 0:
+//     print_state=    "TASK_RUNNING"   ;
+//     break;
+//     case 1:
+//     print_state= "TASK_INTERRUPTIBLE" ;
+//     break;
+//     default:
+//     print_state="error";
+//    }
+//    printk(KERN_INFO "heres a task named %s with PID [%d] whose state is %s\n",task->comm , task->pid,print_state);
+//    break;   
+// }
+
+   
 }
 
   int init_module(void)
