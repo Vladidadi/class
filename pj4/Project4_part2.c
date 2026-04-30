@@ -7,7 +7,7 @@
 
 
 
-  bool print_range(struct task_struct* ts);
+  bool find_in_range(struct task_struct* ts);
   static int pid_arg =1;
   static char* va_string;
 
@@ -23,7 +23,7 @@
   module_param(va_string, charp, 0444);
   MODULE_PARM_DESC(va_string, "The virtual address we want to check on");
 
-  bool print_range(struct task_struct* ts){
+  bool find_in_range(struct task_struct* ts){
      struct task_struct *task = ts;
    printk(KERN_INFO "Entered loop in part3");
    struct mm_struct *mm = get_task_mm(task);
@@ -69,7 +69,7 @@ bool query_in_range=0;
     printk(KERN_INFO "\n======================\n\nWE FOUND HIM\n\n======================\n");
 
          
-         query_in_range = print_range(iter);
+         query_in_range = find_in_range(iter);
          found=1;
       }
  

@@ -7,7 +7,7 @@
    // #include <linux/mm.h>
 
 //   #include <linux/mm_types.h>
-   void print_loop(struct task_struct* ts);
+   void print_range(struct task_struct* ts);
   static int pid_arg =1;
 
 //   struct mm_struct *mm = get_task_mm(task);
@@ -21,7 +21,7 @@
   module_param(pid_arg, int, 0);
 MODULE_PARM_DESC(pid_arg, "The PID of the process whose information you'd like to see");
 
-  void print_loop(struct task_struct* ts){
+  void print_range(struct task_struct* ts){
      struct task_struct *task = ts;
    printk(KERN_INFO "Entered loop in part3");
    struct mm_struct *mm = get_task_mm(task);
@@ -33,9 +33,11 @@ mmap_read_lock(mm);
    if(vma->vm_end > end_bound) {end_bound=vma->vm_end;}
    printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
 
+
   }
   mmap_read_unlock(mm);
-  printk(KERN_INFO "\nRange from %lu to %lu, with a total size of %lu",start_bound,end_bound,end_bound-start_bound);
+  long range = end_bound-start_bound;
+  printk(KERN_INFO "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
 //   for(task=ts;task!=&init_task;task=task->parent)
 
 //    {
@@ -68,12 +70,10 @@ mmap_read_lock(mm);
       if(iter->pid==pid_arg){
     printk(KERN_INFO "\n======================\n\nWE FOUND HIM\n\n======================\n");
 
-         print_loop(iter);
+         print_range(iter);
          found=1;
       }
-      if(!found){
-   //  printk(KERN_INFO "walking thru the task_struct looking for %d, we found %s with PID [%d]\n",pid_arg,iter->comm , iter->pid);
-      }
+
 
    }
 
