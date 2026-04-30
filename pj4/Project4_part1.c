@@ -61,7 +61,7 @@ mmap_read_lock(mm);
   int init_module(void)
   {
 
-        printk(KERN_INFO "Printing Other!\n");
+        printk(KERN_INFO "Printing vmas!\n");
 
    struct task_struct *iter;
    short found = 0;
