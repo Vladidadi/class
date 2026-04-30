@@ -42,7 +42,10 @@ mmap_read_lock(mm);
   printk(KERN_INFO "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
 
   long query =0;
-  kstrtol(va_string,0,query);
+  bool err = kstrtol(va_string,0,&query);
+  if(err){
+   printk(KERN_INFO "\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!\nError in string to integer conversion\n\n");
+  }
 
 
   if(!(query > end_bound) && !(query < start_bound)){
