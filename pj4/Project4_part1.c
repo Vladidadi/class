@@ -15,6 +15,8 @@
   unsigned long vm_space =0;
   struct vma_iterator iter;
 
+  long start_bound=0xffffffffffff;
+  long end_bound=0;
 
   module_param(pid_arg, int, 0);
 MODULE_PARM_DESC(pid_arg, "The PID of the process whose information you'd like to see");
@@ -27,10 +29,13 @@ mmap_read_lock(mm);
       //  char *print_state;
    VMA_ITERATOR(iter,task->mm,0);
   for_each_vma(iter,vma){
+   if(vma->vm_start < start_bound) {start_bound=vma->vm_start;}
+   if(vma->vm_end > end_bound) {end_bound=vma->vm_end}
    printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
 
   }
   mmap_read_unlock(mm);
+  printk(KERN_INFO "\nRange from %lu to %lu, with a total size of %lu",start_bound,end_bound,end_bound-start_bound);
 //   for(task=ts;task!=&init_task;task=task->parent)
 
 //    {
