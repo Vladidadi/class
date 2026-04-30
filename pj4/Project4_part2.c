@@ -63,19 +63,22 @@ mmap_read_lock(mm);
 
    struct task_struct *iter;
    short found = 0;
-
+bool query_in_range=0;
    for_each_process(iter){
       if(iter->pid==pid_arg){
     printk(KERN_INFO "\n======================\n\nWE FOUND HIM\n\n======================\n");
 
          
-         bool found = print_range(iter);
+         query_in_range = print_range(iter);
          found=1;
       }
-      if(!found){
-   //  printk(KERN_INFO "walking thru the task_struct looking for %d, we found %s with PID [%d]\n",pid_arg,iter->comm , iter->pid);
+ 
+      if(query_in_range){
+      printk(KERN_INFO "\n\n The address is in the range of the vma\n\n");
+         
+      }else{
+      printk(KERN_INFO "\n\n The address is not in the range of the vma\n\n");
       }
-
    }
 
 
