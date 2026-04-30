@@ -7,7 +7,7 @@
    // #include <linux/mm.h>
 
 //   #include <linux/mm_types.h>
- 
+   void print_loop(struct task_struct* ts);
   static int pid_arg =1;
 
 //   struct mm_struct *mm = get_task_mm(task);
@@ -20,15 +20,17 @@
 MODULE_PARM_DESC(pid_arg, "The PID of the process whose information you'd like to see");
 
   void print_loop(struct task_struct* ts){
-     struct task_struct *task;
+     struct task_struct *task = ts;
    printk(KERN_INFO "Entered loop in part3");
-
-       char *print_state;
+   struct mm_struct *mm = get_task_mm(task);
+mmap_read_lock(mm);
+      //  char *print_state;
    VMA_ITERATOR(iter,task->mm,0);
   for_each_vma(iter,vma){
-   printk(KERN_INFO "heres a vma: start %d      end %d\n",   vma->vm_start,   vma->vm_end);
+   printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
 
   }
+  mmap_read_unlock(mm);
 //   for(task=ts;task!=&init_task;task=task->parent)
 
 //    {

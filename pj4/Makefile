@@ -1,11 +1,11 @@
 pj4: part1 part2
 obj-m += Project4_part1.o
 part1:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules && mv Project4_part1 p1.ko 
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules && mv Project4_part1.ko p1.ko 
 # 	gcc -g Project4_part1.c -o va_space -pthread -D GNU_SOURCE
 
 run: 
-	insmod p1.ko pid_arg=$(pgrep bash) && dmesg | tail && rmmod p1
+	insmod p1.ko pid_arg="$(pgrep bash) && dmesg | tail && rmmod p1
 part2:
 	gcc -g Project4_part2.c -o va_status -pthread -D GNU_SOURCE
 clean:
