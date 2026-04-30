@@ -73,17 +73,18 @@ bool query_in_range=0;
          found=1;
       }
  
-      if(query_in_range){
+ 
+   }
+        if(query_in_range){
       printk(KERN_INFO "\n\n The address is in the range of the vma\n\n");
          
       }else{
       printk(KERN_INFO "\n\n The address is not in the range of the vma\n\n");
       }
-   }
 
 
 
-   return 0;
+   return query_in_range;
    }
    
    void cleanup_module(void)
