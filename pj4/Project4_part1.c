@@ -30,7 +30,7 @@ mmap_read_lock(mm);
    VMA_ITERATOR(iter,task->mm,0);
   for_each_vma(iter,vma){
    if(vma->vm_start < start_bound) {start_bound=vma->vm_start;}
-   if(vma->vm_end > end_bound) {end_bound=vma->vm_end}
+   if(vma->vm_end > end_bound) {end_bound=vma->vm_end;}
    printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
 
   }
