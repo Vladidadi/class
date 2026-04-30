@@ -26,7 +26,7 @@ MODULE_PARM_DESC(pid_arg, "The PID of the process whose information you'd like t
        char *print_state;
    VMA_ITERATOR(iter,task->mm,0);
   for_each_vma(iter,vma){
-   printk(KERN_INFO "heres a vma: %s\n",vma);
+   printk(KERN_INFO "heres a vma: %s\n",vma,   vma->vm_start,   vma->vm_end);
 
   }
 //   for(task=ts;task!=&init_task;task=task->parent)
