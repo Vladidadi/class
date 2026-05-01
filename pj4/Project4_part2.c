@@ -7,7 +7,7 @@
 
 
 
-   int offset_fetcher(long addy, struct mm_struct *mm);
+   int offset_fetcher(unsigned long addy, struct mm_struct *mm);
    int find_in_range(struct task_struct* ts);
   static int pid_arg =1;
   static char* va_string;
@@ -25,78 +25,77 @@
   MODULE_PARM_DESC(   va_string, "The virtual address we want to check on");
    
    
-   int offset_fetcher(long addy, struct mm_struct *mm){
-      if((mm ))
-{
+   int offset_fetcher(unsigned long addy, struct mm_struct *mm)
+   {
+      pgd_t *pgd;
+      p4d_t *p4d;
+      pud_t *pud;
+      pmd_t *pmd;
+      pte_t *pte;
+      struct vm_area_struct *vma;
 
-  long unsigned int vmpage;
-      int i=0;
-      pgd_t *pgd ;//=pgd_offset(mm,addy);
-      p4d_t *p4d;//=p4d_offset(pgd,addy);
-      pud_t *pud;//=pud_offset(p4d,addy);
-      pmd_t *pmd;//=pmd_offset(pud,addy);
-      pte_t *pte;//=pte_offset_kernel(pmd,addy);
-
-      while(vma){
-         for (vmpage=vma->vm_start,i=1;vmpage < vma->vm_end;vmpage += PAGE_SIZE,i++){
-             pgd=pgd_offset(mm,addy);
-      if (pgd_none(*pgd) || pgd_bad(*pgd)){
+      if (!mm)
          return 0;
-      }
-      p4d=p4d_offset(pgd,addy);
-      if (p4d_none(*p4d) || p4d_bad(*p4d)){
-         return 0;
-      }
-        pud=pud_offset(p4d,addy);
-      if (pud_none(*pud) || pud_bad(*pud)){
-         return 0;
-         }
-            pmd=pmd_offset(pud,addy);
-      if (pmd_none(*pmd) || pmd_bad(*pmd)){
 
-    return 0;
-         }
-      pte=pte_offset_kernel(pmd,addy);
-   //    if (pte_none(*pmd) || pte_bad(*pmd)){
+      vma = find_vma(mm, addy);
+      if (!vma || addy < vma->vm_start)
+         return 0;
 
-   //  return 0;
-   //       }
-            return pte_present(*pte);
+      pgd = pgd_offset(mm, addy);
+      if (pgd_none(*pgd) || pgd_bad(*pgd))
+         return 0;
+      p4d = p4d_offset(pgd, addy);
+      if (p4d_none(*p4d) || p4d_bad(*p4d))
+         return 0;
+      pud = pud_offset(p4d, addy);
+      if (pud_none(*pud) || pud_bad(*pud))
+         return 0;
+      pmd = pmd_offset(pud, addy);
+      if (pmd_none(*pmd) || pmd_bad(*pmd))
+         return 0;
+
+      if (pmd_trans_huge(*pmd))
+         return pmd_present(*pmd);
+
+      /* pte_offset_map is often not exported to modules; x86 PTE tables are mapped in kernel VA. */
+      pte = pte_offset_kernel(pmd, addy);
+      return pte_present(*pte);
    }
-         }
-      }
-      return 0;
-     
-}
 
 
-  int find_in_range(struct task_struct* ts){
-     struct task_struct *task = ts;
+  int find_in_range(struct task_struct* ts)
+  {
+   struct mm_struct *mm = get_task_mm(ts);
+   unsigned long query = 0;
+   int err;
+   int present;
+
    printk(KERN_INFO "Entered loop in part3");
-   struct mm_struct *mm = get_task_mm(task);
-mmap_read_lock(mm);
 
-//    VMA_ITERATOR(iter,task->mm,0);
-//   for_each_vma(iter,vma){
-//    if(vma->vm_start < start_bound) {start_bound=vma->vm_start;}
-//    if(vma->vm_end > end_bound) {end_bound=vma->vm_end;}
-//    printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
+   if (!mm)
+      return 0;
 
-   
-//   }
-//   long range = end_bound-start_bound;
-//   printk(KERN_INFO "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
+   mmap_read_lock(mm);
 
-  long query =0;
-  bool err = kstrtol(va_string,0,&query);
-  if(err){
-   printk(KERN_INFO "\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!\nError in string to integer conversion\n\n");
-  }
+   if (!va_string) {
+      mmap_read_unlock(mm);
+      mmput(mm);
+      printk(KERN_INFO "va_string was not set (pass e.g. va_string=0xADDR)\n");
+      return 0;
+   }
 
+   err = kstrtoul(va_string, 0, &query);
+   if (err) {
+      mmap_read_unlock(mm);
+      mmput(mm);
+      printk(KERN_INFO "Error in string to unsigned long conversion: %d\n", err);
+      return 0;
+   }
 
-  int present=offset_fetcher(query,mm);
-  mmap_read_unlock(mm);
-  printk(KERN_INFO "\n\nPresent status of page: %d\n",present);
+   present = offset_fetcher(query, mm);
+   mmap_read_unlock(mm);
+   mmput(mm);
+   printk(KERN_INFO "Present status of page for va %lx: %d\n", query, present);
    return present;
 }
 
