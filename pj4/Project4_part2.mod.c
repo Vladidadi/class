@@ -21,13 +21,13 @@ __used __section("__versions") = {
 	{ 0xd272d446, "__fentry__" },
 	{ 0xf296206e, "pgdir_shift" },
 	{ 0xb1ad3f2f, "boot_cpu_data" },
-	{ 0xd272d446, "__x86_return_thunk" },
 	{ 0x095159b2, "physical_mask" },
 	{ 0x1bdf2bc8, "sme_me_mask" },
 	{ 0xf296206e, "ptrs_per_p4d" },
 	{ 0x6f8082dd, "pv_ops" },
 	{ 0xd272d446, "BUG_func" },
 	{ 0xbd03ed67, "page_offset_base" },
+	{ 0xd272d446, "__x86_return_thunk" },
 	{ 0x82fd7238, "__ubsan_handle_shift_out_of_bounds" },
 	{ 0xbd03ed67, "__ref_stack_chk_guard" },
 	{ 0xe8213e80, "_printk" },
@@ -54,13 +54,13 @@ __used __section("__version_ext_crcs") = {
 	0xd272d446,
 	0xf296206e,
 	0xb1ad3f2f,
-	0xd272d446,
 	0x095159b2,
 	0x1bdf2bc8,
 	0xf296206e,
 	0x6f8082dd,
 	0xd272d446,
 	0xbd03ed67,
+	0xd272d446,
 	0x82fd7238,
 	0xbd03ed67,
 	0xe8213e80,
@@ -86,13 +86,13 @@ __used __section("__version_ext_names") =
 	"__fentry__\0"
 	"pgdir_shift\0"
 	"boot_cpu_data\0"
-	"__x86_return_thunk\0"
 	"physical_mask\0"
 	"sme_me_mask\0"
 	"ptrs_per_p4d\0"
 	"pv_ops\0"
 	"BUG_func\0"
 	"page_offset_base\0"
+	"__x86_return_thunk\0"
 	"__ubsan_handle_shift_out_of_bounds\0"
 	"__ref_stack_chk_guard\0"
 	"_printk\0"
@@ -117,4 +117,4 @@ __used __section("__version_ext_names") =
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "80C416D794E47FB40CBAC74");
+MODULE_INFO(srcversion, "0629C0F09CE82625D04725F");
