@@ -146,12 +146,13 @@ bool query_in_range=0;
 
          
          query_in_range = find_in_range(iter);
+          print_range(iter);
+         
          found=1;
       }
  
  
    }
-      print_range(iter);
 
         if(query_in_range){
       printk(KERN_INFO "\n\n The address is in the range of the vma\n\n");
