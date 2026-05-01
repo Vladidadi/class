@@ -9,7 +9,7 @@ run:
 part2:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules && mv Project4_part2.ko p2.ko 
 clean:
-	rm sequential va_status *.cmd *.o *.ko *.mod 
+	rm sequential va_status *.cmd *.o *.ko *.mod.* 
 
 Project4_part2: 
 	make part2
