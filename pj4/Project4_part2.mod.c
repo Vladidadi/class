@@ -19,10 +19,9 @@ __section(".gnu.linkonce.this_module") = {
 static const struct modversion_info ____versions[]
 __used __section("__versions") = {
 	{ 0xd272d446, "__fentry__" },
-	{ 0x622b3c8a, "find_vma" },
-	{ 0xd272d446, "__x86_return_thunk" },
 	{ 0xf296206e, "pgdir_shift" },
 	{ 0xb1ad3f2f, "boot_cpu_data" },
+	{ 0xd272d446, "__x86_return_thunk" },
 	{ 0x095159b2, "physical_mask" },
 	{ 0x1bdf2bc8, "sme_me_mask" },
 	{ 0xf296206e, "ptrs_per_p4d" },
@@ -31,18 +30,17 @@ __used __section("__versions") = {
 	{ 0xbd03ed67, "page_offset_base" },
 	{ 0x82fd7238, "__ubsan_handle_shift_out_of_bounds" },
 	{ 0xbd03ed67, "__ref_stack_chk_guard" },
-	{ 0xbf2c538b, "get_task_mm" },
 	{ 0xe8213e80, "_printk" },
+	{ 0xbf2c538b, "get_task_mm" },
 	{ 0x73c05ac1, "__tracepoint_mmap_lock_start_locking" },
 	{ 0xa59da3c0, "down_read" },
 	{ 0x73c05ac1, "__tracepoint_mmap_lock_acquire_returned" },
-	{ 0xbd069841, "kstrtoull" },
+	{ 0x1f55c5b2, "kstrtoll" },
 	{ 0x73c05ac1, "__tracepoint_mmap_lock_released" },
 	{ 0xa59da3c0, "up_read" },
-	{ 0xcf46e6bd, "mmput" },
-	{ 0xaedbc175, "__mmap_lock_do_trace_acquire_returned" },
 	{ 0x2287b539, "__mmap_lock_do_trace_start_locking" },
 	{ 0x2287b539, "__mmap_lock_do_trace_released" },
+	{ 0xaedbc175, "__mmap_lock_do_trace_acquire_returned" },
 	{ 0xd272d446, "__stack_chk_fail" },
 	{ 0x0ca0353a, "mas_find" },
 	{ 0x0d428105, "init_task" },
@@ -54,10 +52,9 @@ __used __section("__versions") = {
 static const u32 ____version_ext_crcs[]
 __used __section("__version_ext_crcs") = {
 	0xd272d446,
-	0x622b3c8a,
-	0xd272d446,
 	0xf296206e,
 	0xb1ad3f2f,
+	0xd272d446,
 	0x095159b2,
 	0x1bdf2bc8,
 	0xf296206e,
@@ -66,18 +63,17 @@ __used __section("__version_ext_crcs") = {
 	0xbd03ed67,
 	0x82fd7238,
 	0xbd03ed67,
-	0xbf2c538b,
 	0xe8213e80,
+	0xbf2c538b,
 	0x73c05ac1,
 	0xa59da3c0,
 	0x73c05ac1,
-	0xbd069841,
+	0x1f55c5b2,
 	0x73c05ac1,
 	0xa59da3c0,
-	0xcf46e6bd,
+	0x2287b539,
+	0x2287b539,
 	0xaedbc175,
-	0x2287b539,
-	0x2287b539,
 	0xd272d446,
 	0x0ca0353a,
 	0x0d428105,
@@ -88,10 +84,9 @@ __used __section("__version_ext_crcs") = {
 static const char ____version_ext_names[]
 __used __section("__version_ext_names") =
 	"__fentry__\0"
-	"find_vma\0"
-	"__x86_return_thunk\0"
 	"pgdir_shift\0"
 	"boot_cpu_data\0"
+	"__x86_return_thunk\0"
 	"physical_mask\0"
 	"sme_me_mask\0"
 	"ptrs_per_p4d\0"
@@ -100,18 +95,17 @@ __used __section("__version_ext_names") =
 	"page_offset_base\0"
 	"__ubsan_handle_shift_out_of_bounds\0"
 	"__ref_stack_chk_guard\0"
-	"get_task_mm\0"
 	"_printk\0"
+	"get_task_mm\0"
 	"__tracepoint_mmap_lock_start_locking\0"
 	"down_read\0"
 	"__tracepoint_mmap_lock_acquire_returned\0"
-	"kstrtoull\0"
+	"kstrtoll\0"
 	"__tracepoint_mmap_lock_released\0"
 	"up_read\0"
-	"mmput\0"
-	"__mmap_lock_do_trace_acquire_returned\0"
 	"__mmap_lock_do_trace_start_locking\0"
 	"__mmap_lock_do_trace_released\0"
+	"__mmap_lock_do_trace_acquire_returned\0"
 	"__stack_chk_fail\0"
 	"mas_find\0"
 	"init_task\0"
@@ -123,4 +117,4 @@ __used __section("__version_ext_names") =
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "949BD13A8DE0A0A2DACC181");
+MODULE_INFO(srcversion, "80C416D794E47FB40CBAC74");
