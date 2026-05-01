@@ -33,7 +33,7 @@ mmap_read_lock(mm);
   }
   mmap_read_unlock(mm);
   long range = end_bound-start_bound;
-  printk(KERN_ALERT "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
+  printk(KERN_INFO "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
 
 }
 
