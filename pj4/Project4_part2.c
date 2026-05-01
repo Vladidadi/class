@@ -107,6 +107,7 @@ mmap_read_lock(mm);
    if(vma->vm_end > end_bound) {end_bound=vma->vm_end;}
    printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
 
+   // print_range(iter);
 
   }
   mmap_read_unlock(mm);
@@ -146,7 +147,7 @@ bool query_in_range=0;
 
          
          query_in_range = find_in_range(iter);
-          print_range(iter);
+    
          
          found=1;
       }
