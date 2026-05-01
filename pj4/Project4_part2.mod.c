@@ -35,13 +35,12 @@ __used __section("__versions") = {
 	{ 0x73c05ac1, "__tracepoint_mmap_lock_start_locking" },
 	{ 0xa59da3c0, "down_read" },
 	{ 0x73c05ac1, "__tracepoint_mmap_lock_acquire_returned" },
-	{ 0x0ca0353a, "mas_find" },
 	{ 0x1f55c5b2, "kstrtoll" },
 	{ 0x73c05ac1, "__tracepoint_mmap_lock_released" },
 	{ 0xa59da3c0, "up_read" },
-	{ 0xaedbc175, "__mmap_lock_do_trace_acquire_returned" },
 	{ 0x2287b539, "__mmap_lock_do_trace_start_locking" },
 	{ 0x2287b539, "__mmap_lock_do_trace_released" },
+	{ 0xaedbc175, "__mmap_lock_do_trace_acquire_returned" },
 	{ 0xd272d446, "__stack_chk_fail" },
 	{ 0x0d428105, "init_task" },
 	{ 0x0040afbe, "param_ops_charp" },
@@ -68,13 +67,12 @@ __used __section("__version_ext_crcs") = {
 	0x73c05ac1,
 	0xa59da3c0,
 	0x73c05ac1,
-	0x0ca0353a,
 	0x1f55c5b2,
 	0x73c05ac1,
 	0xa59da3c0,
+	0x2287b539,
+	0x2287b539,
 	0xaedbc175,
-	0x2287b539,
-	0x2287b539,
 	0xd272d446,
 	0x0d428105,
 	0x0040afbe,
@@ -100,13 +98,12 @@ __used __section("__version_ext_names") =
 	"__tracepoint_mmap_lock_start_locking\0"
 	"down_read\0"
 	"__tracepoint_mmap_lock_acquire_returned\0"
-	"mas_find\0"
 	"kstrtoll\0"
 	"__tracepoint_mmap_lock_released\0"
 	"up_read\0"
-	"__mmap_lock_do_trace_acquire_returned\0"
 	"__mmap_lock_do_trace_start_locking\0"
 	"__mmap_lock_do_trace_released\0"
+	"__mmap_lock_do_trace_acquire_returned\0"
 	"__stack_chk_fail\0"
 	"init_task\0"
 	"param_ops_charp\0"
@@ -117,4 +114,4 @@ __used __section("__version_ext_names") =
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "779604FDAE4B40C4FB8589B");
+MODULE_INFO(srcversion, "7D08F21A83F8F1E54F17A54");

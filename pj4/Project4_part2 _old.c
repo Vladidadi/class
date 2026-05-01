@@ -55,16 +55,16 @@
    struct mm_struct *mm = get_task_mm(task);
 mmap_read_lock(mm);
 
-//    VMA_ITERATOR(iter,task->mm,0);
-//   for_each_vma(iter,vma){
-//    if(vma->vm_start < start_bound) {start_bound=vma->vm_start;}
-//    if(vma->vm_end > end_bound) {end_bound=vma->vm_end;}
-//    printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
+   VMA_ITERATOR(iter,task->mm,0);
+  for_each_vma(iter,vma){
+   if(vma->vm_start < start_bound) {start_bound=vma->vm_start;}
+   if(vma->vm_end > end_bound) {end_bound=vma->vm_end;}
+   printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
 
    
-//   }
-//   long range = end_bound-start_bound;
-//   printk(KERN_INFO "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
+  }
+  long range = end_bound-start_bound;
+  printk(KERN_INFO "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
 
   long query =0;
   bool err = kstrtol(va_string,0,&query);
