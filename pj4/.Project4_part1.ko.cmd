@@ -1,1 +1,0 @@
-savedcmd_Project4_part1.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /usr/src/linux-headers-6.17.0-22-generic/scripts/module.lds -o Project4_part1.ko Project4_part1.o Project4_part1.mod.o .module-common.o
