@@ -26,13 +26,20 @@
    
    
    int offset_fetcher(long addy, struct mm_struct *mm){
+      if((mm ))
+{
+
+  struct vm_area_struct *vmpage;
+      int i=0;
       pgd_t *pgd ;//=pgd_offset(mm,addy);
       p4d_t *p4d;//=p4d_offset(pgd,addy);
       pud_t *pud;//=pud_offset(p4d,addy);
       pmd_t *pmd;//=pmd_offset(pud,addy);
       pte_t *pte;//=pte_offset_kernel(pmd,addy);
 
-      pgd=pgd_offset(mm,addy);
+      while(vma){
+         for (vmpage=vma->vm_start,i=1;vmpage < vma->vm_end;vmpage += PAGE_SIZE,i++){
+             pgd=pgd_offset(mm,addy);
       if (pgd_none(*pgd) || pgd_bad(*pgd)){
          return 0;
       }
@@ -51,7 +58,11 @@
          }
             return pte_present(*pte);
    }
-   
+         }
+      }
+      return 0;
+     
+}
 
 
   int find_in_range(struct task_struct* ts){
