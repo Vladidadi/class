@@ -56,6 +56,11 @@
 
     return 0;
          }
+      pte=pte_offset_kernel(pmd,addy);
+   //    if (pte_none(*pmd) || pte_bad(*pmd)){
+
+   //  return 0;
+   //       }
             return pte_present(*pte);
    }
          }
