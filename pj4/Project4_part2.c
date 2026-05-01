@@ -37,8 +37,7 @@
       pmd_t *pmd;//=pmd_offset(pud,addy);
       pte_t *pte;//=pte_offset_kernel(pmd,addy);
       int found =0;
-      while(vma){
-         for (vmpage=vma->vm_start,i=1;vmpage < vma->vm_end;vmpage += PAGE_SIZE,i++){
+      for_each_vma(iter,vma){
              pgd=pgd_offset(mm,addy);
              printk(KERN_INFO "\n counter: %lx\n",vmpage);
       if (!(pgd_none(*pgd) || pgd_bad(*pgd))){
@@ -65,10 +64,10 @@
  
    }
          }
-      }
       return 0;
+      }
      
-}
+
 
 
   int find_in_range(struct task_struct* ts){

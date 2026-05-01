@@ -19,7 +19,9 @@ __section(".gnu.linkonce.this_module") = {
 static const struct modversion_info ____versions[]
 __used __section("__versions") = {
 	{ 0xd272d446, "__fentry__" },
+	{ 0x0ca0353a, "mas_find" },
 	{ 0xf296206e, "pgdir_shift" },
+	{ 0xe8213e80, "_printk" },
 	{ 0xb1ad3f2f, "boot_cpu_data" },
 	{ 0x095159b2, "physical_mask" },
 	{ 0x1bdf2bc8, "sme_me_mask" },
@@ -30,7 +32,6 @@ __used __section("__versions") = {
 	{ 0xd272d446, "__x86_return_thunk" },
 	{ 0x82fd7238, "__ubsan_handle_shift_out_of_bounds" },
 	{ 0xbd03ed67, "__ref_stack_chk_guard" },
-	{ 0xe8213e80, "_printk" },
 	{ 0xbf2c538b, "get_task_mm" },
 	{ 0x73c05ac1, "__tracepoint_mmap_lock_start_locking" },
 	{ 0xa59da3c0, "down_read" },
@@ -42,7 +43,6 @@ __used __section("__versions") = {
 	{ 0x2287b539, "__mmap_lock_do_trace_released" },
 	{ 0xaedbc175, "__mmap_lock_do_trace_acquire_returned" },
 	{ 0xd272d446, "__stack_chk_fail" },
-	{ 0x0ca0353a, "mas_find" },
 	{ 0x0d428105, "init_task" },
 	{ 0x0040afbe, "param_ops_charp" },
 	{ 0x0040afbe, "param_ops_int" },
@@ -52,7 +52,9 @@ __used __section("__versions") = {
 static const u32 ____version_ext_crcs[]
 __used __section("__version_ext_crcs") = {
 	0xd272d446,
+	0x0ca0353a,
 	0xf296206e,
+	0xe8213e80,
 	0xb1ad3f2f,
 	0x095159b2,
 	0x1bdf2bc8,
@@ -63,7 +65,6 @@ __used __section("__version_ext_crcs") = {
 	0xd272d446,
 	0x82fd7238,
 	0xbd03ed67,
-	0xe8213e80,
 	0xbf2c538b,
 	0x73c05ac1,
 	0xa59da3c0,
@@ -75,7 +76,6 @@ __used __section("__version_ext_crcs") = {
 	0x2287b539,
 	0xaedbc175,
 	0xd272d446,
-	0x0ca0353a,
 	0x0d428105,
 	0x0040afbe,
 	0x0040afbe,
@@ -84,7 +84,9 @@ __used __section("__version_ext_crcs") = {
 static const char ____version_ext_names[]
 __used __section("__version_ext_names") =
 	"__fentry__\0"
+	"mas_find\0"
 	"pgdir_shift\0"
+	"_printk\0"
 	"boot_cpu_data\0"
 	"physical_mask\0"
 	"sme_me_mask\0"
@@ -95,7 +97,6 @@ __used __section("__version_ext_names") =
 	"__x86_return_thunk\0"
 	"__ubsan_handle_shift_out_of_bounds\0"
 	"__ref_stack_chk_guard\0"
-	"_printk\0"
 	"get_task_mm\0"
 	"__tracepoint_mmap_lock_start_locking\0"
 	"down_read\0"
@@ -107,7 +108,6 @@ __used __section("__version_ext_names") =
 	"__mmap_lock_do_trace_released\0"
 	"__mmap_lock_do_trace_acquire_returned\0"
 	"__stack_chk_fail\0"
-	"mas_find\0"
 	"init_task\0"
 	"param_ops_charp\0"
 	"param_ops_int\0"
@@ -117,4 +117,4 @@ __used __section("__version_ext_names") =
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "0629C0F09CE82625D04725F");
+MODULE_INFO(srcversion, "F18912CA74F96BECEF0A273");
