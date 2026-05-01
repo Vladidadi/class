@@ -222,8 +222,259 @@ deps_Project4_part2.o := \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/util_macros.h \
     $(wildcard include/config/FOO_SUSPEND) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/wordpart.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/signal.h \
+    $(wildcard include/config/POSIX_TIMERS) \
+    $(wildcard include/config/NO_HZ_FULL) \
+    $(wildcard include/config/SCHED_AUTOGROUP) \
+    $(wildcard include/config/BSD_PROCESS_ACCT) \
+    $(wildcard include/config/TASKSTATS) \
+    $(wildcard include/config/AUDIT) \
+    $(wildcard include/config/STACK_GROWSUP) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rculist.h \
+    $(wildcard include/config/PROVE_RCU_LIST) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/list.h \
+    $(wildcard include/config/LIST_HARDENED) \
+    $(wildcard include/config/DEBUG_LIST) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/poison.h \
+    $(wildcard include/config/ILLEGAL_POINTER_VALUE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcupdate.h \
+    $(wildcard include/config/PREEMPT_RCU) \
+    $(wildcard include/config/TINY_RCU) \
+    $(wildcard include/config/RCU_STRICT_GRACE_PERIOD) \
+    $(wildcard include/config/RCU_LAZY) \
+    $(wildcard include/config/RCU_STALL_COMMON) \
+    $(wildcard include/config/GENERIC_ENTRY) \
+    $(wildcard include/config/KVM_XFER_TO_GUEST_WORK) \
+    $(wildcard include/config/RCU_NOCB_CPU) \
+    $(wildcard include/config/TASKS_RCU_GENERIC) \
+    $(wildcard include/config/TASKS_RCU) \
+    $(wildcard include/config/TASKS_TRACE_RCU) \
+    $(wildcard include/config/TASKS_RUDE_RCU) \
     $(wildcard include/config/PREEMPT_RT) \
+    $(wildcard include/config/TREE_RCU) \
+    $(wildcard include/config/DEBUG_OBJECTS_RCU_HEAD) \
+    $(wildcard include/config/HOTPLUG_CPU) \
+    $(wildcard include/config/PROVE_RCU) \
+    $(wildcard include/config/PREEMPTION) \
+    $(wildcard include/config/ARCH_WEAK_RELEASE_ACQUIRE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/atomic.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/atomic.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cmpxchg.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cmpxchg_64.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/atomic64_64.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/atomic/atomic-arch-fallback.h \
+    $(wildcard include/config/GENERIC_ATOMIC64) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/atomic/atomic-long.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/atomic/atomic-instrumented.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/irqflags.h \
+    $(wildcard include/config/TRACE_IRQFLAGS) \
+    $(wildcard include/config/IRQSOFF_TRACER) \
+    $(wildcard include/config/PREEMPT_TRACER) \
+    $(wildcard include/config/DEBUG_IRQFLAGS) \
+    $(wildcard include/config/TRACE_IRQFLAGS_SUPPORT) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/irqflags_types.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/irqflags.h \
+    $(wildcard include/config/PARAVIRT) \
+    $(wildcard include/config/PARAVIRT_XXL) \
+    $(wildcard include/config/DEBUG_ENTRY) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/processor-flags.h \
+    $(wildcard include/config/VM86) \
+    $(wildcard include/config/MITIGATION_PAGE_TABLE_ISOLATION) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/processor-flags.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/mem_encrypt.h \
+    $(wildcard include/config/ARCH_HAS_MEM_ENCRYPT) \
+    $(wildcard include/config/AMD_MEM_ENCRYPT) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/mem_encrypt.h \
+    $(wildcard include/config/X86_MEM_ENCRYPT) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/cc_platform.h \
+    $(wildcard include/config/ARCH_HAS_CC_PLATFORM) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/nospec-branch.h \
+    $(wildcard include/config/CALL_THUNKS_DEBUG) \
+    $(wildcard include/config/MITIGATION_CALL_DEPTH_TRACKING) \
+    $(wildcard include/config/MITIGATION_IBPB_ENTRY) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/static_key.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/msr-index.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/unwind_hints.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/orc_types.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/percpu.h \
+    $(wildcard include/config/CC_HAS_NAMED_AS) \
+    $(wildcard include/config/USE_X86_SEG_SUPPORT) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/percpu.h \
+    $(wildcard include/config/DEBUG_PREEMPT) \
+    $(wildcard include/config/HAVE_SETUP_PER_CPU_AREA) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/threads.h \
+    $(wildcard include/config/BASE_SMALL) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/percpu-defs.h \
+    $(wildcard include/config/ARCH_MODULE_NEEDS_WEAK_PER_CPU) \
+    $(wildcard include/config/DEBUG_FORCE_WEAK_PER_CPU) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/asm-offsets.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/generated/asm-offsets.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/GEN-for-each-reg.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/segment.h \
+    $(wildcard include/config/XEN_PV) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cache.h \
+    $(wildcard include/config/X86_L1_CACHE_SHIFT) \
+    $(wildcard include/config/X86_INTERNODE_CACHE_SHIFT) \
+    $(wildcard include/config/X86_VSMP) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/paravirt.h \
+    $(wildcard include/config/PARAVIRT_SPINLOCKS) \
+    $(wildcard include/config/X86_IOPL_IOPERM) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/paravirt_types.h \
+    $(wildcard include/config/ZERO_CALL_USED_REGS) \
+    $(wildcard include/config/PARAVIRT_DEBUG) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/desc_defs.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/pgtable_types.h \
+    $(wildcard include/config/X86_INTEL_MEMORY_PROTECTION_KEYS) \
+    $(wildcard include/config/X86_PAE) \
+    $(wildcard include/config/MEM_SOFT_DIRTY) \
+    $(wildcard include/config/HAVE_ARCH_USERFAULTFD_WP) \
+    $(wildcard include/config/PGTABLE_LEVELS) \
+    $(wildcard include/config/PROC_FS) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/page_types.h \
+    $(wildcard include/config/PHYSICAL_START) \
+    $(wildcard include/config/PHYSICAL_ALIGN) \
+    $(wildcard include/config/DYNAMIC_PHYSICAL_MASK) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/page.h \
+    $(wildcard include/config/PAGE_SHIFT) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/page_64_types.h \
+    $(wildcard include/config/KASAN) \
+    $(wildcard include/config/RANDOMIZE_BASE) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/kaslr.h \
+    $(wildcard include/config/RANDOMIZE_MEMORY) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/pgtable_64_types.h \
+    $(wildcard include/config/DEBUG_KMAP_LOCAL_FORCE_MAP) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/sparsemem.h \
+    $(wildcard include/config/SPARSEMEM) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bug.h \
+    $(wildcard include/config/BUG_ON_DATA_CORRUPTION) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/cpumask.h \
+    $(wildcard include/config/FORCE_NR_CPUS) \
+    $(wildcard include/config/DEBUG_PER_CPU_MAPS) \
+    $(wildcard include/config/CPUMASK_OFFSTACK) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bitmap.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/errno.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/errno.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/find.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/string.h \
+    $(wildcard include/config/BINARY_PRINTF) \
+    $(wildcard include/config/FORTIFY_SOURCE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/string.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/string.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/string_64.h \
+    $(wildcard include/config/ARCH_HAS_UACCESS_FLUSHCACHE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/fortify-string.h \
+    $(wildcard include/config/CC_HAS_KASAN_MEMINTRINSIC_PREFIX) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bitfield.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bitmap-str.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/cpumask_types.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/gfp_types.h \
+    $(wildcard include/config/KASAN_HW_TAGS) \
+    $(wildcard include/config/SLAB_OBJ_EXT) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/numa.h \
+    $(wildcard include/config/NUMA_KEEP_MEMINFO) \
+    $(wildcard include/config/NUMA) \
+    $(wildcard include/config/HAVE_ARCH_NODE_DEV_GROUP) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/nodemask.h \
+    $(wildcard include/config/HIGHMEM) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/nodemask_types.h \
+    $(wildcard include/config/NODES_SHIFT) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/random.h \
+    $(wildcard include/config/VMGENID) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/random.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/ioctl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/ioctl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/ioctl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/ioctl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/irqnr.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/irqnr.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/frame.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/preempt.h \
+    $(wildcard include/config/PREEMPT_COUNT) \
+    $(wildcard include/config/TRACE_PREEMPT_TOGGLE) \
+    $(wildcard include/config/PREEMPT_NOTIFIERS) \
+    $(wildcard include/config/PREEMPT_NONE) \
+    $(wildcard include/config/PREEMPT_VOLUNTARY) \
+    $(wildcard include/config/PREEMPT) \
+    $(wildcard include/config/PREEMPT_LAZY) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/preempt.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bottom_half.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/lockdep.h \
+    $(wildcard include/config/DEBUG_LOCKING_API_SELFTESTS) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/smp.h \
+    $(wildcard include/config/UP_LATE_INIT) \
+    $(wildcard include/config/CSD_LOCK_WAIT_DEBUG) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/smp_types.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/llist.h \
+    $(wildcard include/config/ARCH_HAVE_NMI_SAFE_CMPXCHG) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/thread_info.h \
+    $(wildcard include/config/THREAD_INFO_IN_TASK) \
+    $(wildcard include/config/ARCH_HAS_PREEMPT_LAZY) \
+    $(wildcard include/config/HAVE_ARCH_WITHIN_STACK_FRAMES) \
+    $(wildcard include/config/SH) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/restart_block.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/current.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/cache.h \
+    $(wildcard include/config/ARCH_HAS_CACHE_LINE_SIZE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/cache.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/thread_info.h \
+    $(wildcard include/config/X86_FRED) \
+    $(wildcard include/config/COMPAT) \
+    $(wildcard include/config/IA32_EMULATION) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/page.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/page_64.h \
+    $(wildcard include/config/DEBUG_VIRTUAL) \
+    $(wildcard include/config/X86_VSYSCALL_EMULATION) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/range.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/memory_model.h \
+    $(wildcard include/config/FLATMEM) \
+    $(wildcard include/config/SPARSEMEM_VMEMMAP) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/pfn.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/getorder.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cpufeature.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/processor.h \
+    $(wildcard include/config/X86_VMX_FEATURE_NAMES) \
+    $(wildcard include/config/X86_USER_SHADOW_STACK) \
+    $(wildcard include/config/X86_DEBUG_FPU) \
+    $(wildcard include/config/CPU_SUP_AMD) \
+    $(wildcard include/config/XEN) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/math_emu.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/ptrace.h \
+    $(wildcard include/config/X86_DEBUGCTLMSR) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/ptrace.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/ptrace-abi.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/proto.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/ldt.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/sigcontext.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cpuid/api.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cpuid/types.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/special_insns.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/fpu/types.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/vmxfeatures.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/vdso/processor.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/shstk.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/personality.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/personality.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/math64.h \
+    $(wildcard include/config/ARCH_SUPPORTS_INT128) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/math64.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/asm/cpufeaturemasks.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/smp.h \
+    $(wildcard include/config/DEBUG_NMI_SELFTEST) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cpumask.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/context_tracking_irq.h \
+    $(wildcard include/config/CONTEXT_TRACKING_IDLE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcutree.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/signal.h \
+    $(wildcard include/config/DYNAMIC_SIGFRAME) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/signal_types.h \
+    $(wildcard include/config/OLD_SIGACTION) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/signal.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/signal.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/signal.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/signal-defs.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/siginfo.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/siginfo.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched.h \
     $(wildcard include/config/VIRT_CPU_ACCOUNTING_NATIVE) \
     $(wildcard include/config/SCHED_INFO) \
     $(wildcard include/config/SCHEDSTATS) \
@@ -234,15 +485,10 @@ deps_Project4_part2.o := \
     $(wildcard include/config/UCLAMP_TASK) \
     $(wildcard include/config/UCLAMP_BUCKETS_COUNT) \
     $(wildcard include/config/KMAP_LOCAL) \
-    $(wildcard include/config/THREAD_INFO_IN_TASK) \
     $(wildcard include/config/MEM_ALLOC_PROFILING) \
     $(wildcard include/config/SCHED_CLASS_EXT) \
     $(wildcard include/config/CGROUP_SCHED) \
-    $(wildcard include/config/PREEMPT_NOTIFIERS) \
     $(wildcard include/config/BLK_DEV_IO_TRACE) \
-    $(wildcard include/config/PREEMPT_RCU) \
-    $(wildcard include/config/TASKS_RCU) \
-    $(wildcard include/config/TASKS_TRACE_RCU) \
     $(wildcard include/config/MEMCG_V1) \
     $(wildcard include/config/LRU_GEN) \
     $(wildcard include/config/COMPAT_BRK) \
@@ -257,17 +503,14 @@ deps_Project4_part2.o := \
     $(wildcard include/config/STACKPROTECTOR) \
     $(wildcard include/config/ARCH_HAS_SCALED_CPUTIME) \
     $(wildcard include/config/VIRT_CPU_ACCOUNTING_GEN) \
-    $(wildcard include/config/NO_HZ_FULL) \
     $(wildcard include/config/POSIX_CPUTIMERS) \
     $(wildcard include/config/POSIX_CPU_TIMERS_TASK_WORK) \
     $(wildcard include/config/KEYS) \
     $(wildcard include/config/SYSVIPC) \
     $(wildcard include/config/DETECT_HUNG_TASK) \
     $(wildcard include/config/IO_URING) \
-    $(wildcard include/config/AUDIT) \
     $(wildcard include/config/AUDITSYSCALL) \
     $(wildcard include/config/DETECT_HUNG_TASK_BLOCKER) \
-    $(wildcard include/config/TRACE_IRQFLAGS) \
     $(wildcard include/config/UBSAN) \
     $(wildcard include/config/UBSAN_TRAP) \
     $(wildcard include/config/COMPACTION) \
@@ -275,10 +518,7 @@ deps_Project4_part2.o := \
     $(wildcard include/config/CPUSETS) \
     $(wildcard include/config/X86_CPU_RESCTRL) \
     $(wildcard include/config/FUTEX) \
-    $(wildcard include/config/COMPAT) \
     $(wildcard include/config/PERF_EVENTS) \
-    $(wildcard include/config/DEBUG_PREEMPT) \
-    $(wildcard include/config/NUMA) \
     $(wildcard include/config/NUMA_BALANCING) \
     $(wildcard include/config/RSEQ) \
     $(wildcard include/config/DEBUG_RSEQ) \
@@ -305,205 +545,8 @@ deps_Project4_part2.o := \
     $(wildcard include/config/USER_EVENTS) \
     $(wildcard include/config/UNWIND_USER) \
     $(wildcard include/config/SCHED_PROXY_EXEC) \
-    $(wildcard include/config/PREEMPTION) \
     $(wildcard include/config/MEM_ALLOC_PROFILING_DEBUG) \
   /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/sched.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/current.h \
-    $(wildcard include/config/USE_X86_SEG_SUPPORT) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/cache.h \
-    $(wildcard include/config/ARCH_HAS_CACHE_LINE_SIZE) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/cache.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cache.h \
-    $(wildcard include/config/X86_L1_CACHE_SHIFT) \
-    $(wildcard include/config/X86_INTERNODE_CACHE_SHIFT) \
-    $(wildcard include/config/X86_VSMP) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/percpu.h \
-    $(wildcard include/config/CC_HAS_NAMED_AS) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/percpu.h \
-    $(wildcard include/config/HAVE_SETUP_PER_CPU_AREA) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/threads.h \
-    $(wildcard include/config/BASE_SMALL) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/percpu-defs.h \
-    $(wildcard include/config/ARCH_MODULE_NEEDS_WEAK_PER_CPU) \
-    $(wildcard include/config/DEBUG_FORCE_WEAK_PER_CPU) \
-    $(wildcard include/config/AMD_MEM_ENCRYPT) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/processor.h \
-    $(wildcard include/config/X86_VMX_FEATURE_NAMES) \
-    $(wildcard include/config/X86_IOPL_IOPERM) \
-    $(wildcard include/config/VM86) \
-    $(wildcard include/config/X86_USER_SHADOW_STACK) \
-    $(wildcard include/config/X86_DEBUG_FPU) \
-    $(wildcard include/config/PARAVIRT_XXL) \
-    $(wildcard include/config/CPU_SUP_AMD) \
-    $(wildcard include/config/XEN) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/processor-flags.h \
-    $(wildcard include/config/MITIGATION_PAGE_TABLE_ISOLATION) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/processor-flags.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/mem_encrypt.h \
-    $(wildcard include/config/ARCH_HAS_MEM_ENCRYPT) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/mem_encrypt.h \
-    $(wildcard include/config/X86_MEM_ENCRYPT) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/cc_platform.h \
-    $(wildcard include/config/ARCH_HAS_CC_PLATFORM) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/math_emu.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/ptrace.h \
-    $(wildcard include/config/PARAVIRT) \
-    $(wildcard include/config/IA32_EMULATION) \
-    $(wildcard include/config/X86_DEBUGCTLMSR) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/segment.h \
-    $(wildcard include/config/XEN_PV) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/page_types.h \
-    $(wildcard include/config/PHYSICAL_START) \
-    $(wildcard include/config/PHYSICAL_ALIGN) \
-    $(wildcard include/config/DYNAMIC_PHYSICAL_MASK) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/page.h \
-    $(wildcard include/config/PAGE_SHIFT) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/page_64_types.h \
-    $(wildcard include/config/KASAN) \
-    $(wildcard include/config/RANDOMIZE_BASE) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/kaslr.h \
-    $(wildcard include/config/RANDOMIZE_MEMORY) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/ptrace.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/ptrace-abi.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/paravirt_types.h \
-    $(wildcard include/config/ZERO_CALL_USED_REGS) \
-    $(wildcard include/config/PARAVIRT_DEBUG) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/desc_defs.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/pgtable_types.h \
-    $(wildcard include/config/X86_INTEL_MEMORY_PROTECTION_KEYS) \
-    $(wildcard include/config/X86_PAE) \
-    $(wildcard include/config/MEM_SOFT_DIRTY) \
-    $(wildcard include/config/HAVE_ARCH_USERFAULTFD_WP) \
-    $(wildcard include/config/PGTABLE_LEVELS) \
-    $(wildcard include/config/PROC_FS) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/pgtable_64_types.h \
-    $(wildcard include/config/DEBUG_KMAP_LOCAL_FORCE_MAP) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/sparsemem.h \
-    $(wildcard include/config/SPARSEMEM) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/nospec-branch.h \
-    $(wildcard include/config/CALL_THUNKS_DEBUG) \
-    $(wildcard include/config/MITIGATION_CALL_DEPTH_TRACKING) \
-    $(wildcard include/config/MITIGATION_IBPB_ENTRY) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/static_key.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/msr-index.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/unwind_hints.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/orc_types.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/asm-offsets.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/generated/asm-offsets.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/GEN-for-each-reg.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/proto.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/ldt.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/sigcontext.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cpuid/api.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cpuid/types.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/string.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/string_64.h \
-    $(wildcard include/config/ARCH_HAS_UACCESS_FLUSHCACHE) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/paravirt.h \
-    $(wildcard include/config/PARAVIRT_SPINLOCKS) \
-    $(wildcard include/config/DEBUG_ENTRY) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bug.h \
-    $(wildcard include/config/BUG_ON_DATA_CORRUPTION) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/cpumask.h \
-    $(wildcard include/config/FORCE_NR_CPUS) \
-    $(wildcard include/config/HOTPLUG_CPU) \
-    $(wildcard include/config/DEBUG_PER_CPU_MAPS) \
-    $(wildcard include/config/CPUMASK_OFFSTACK) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bitmap.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/errno.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/errno.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/find.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/string.h \
-    $(wildcard include/config/BINARY_PRINTF) \
-    $(wildcard include/config/FORTIFY_SOURCE) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/string.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/fortify-string.h \
-    $(wildcard include/config/CC_HAS_KASAN_MEMINTRINSIC_PREFIX) \
-    $(wildcard include/config/GENERIC_ENTRY) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bitfield.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bitmap-str.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/cpumask_types.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/atomic.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/atomic.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cmpxchg.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cmpxchg_64.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/atomic64_64.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/atomic/atomic-arch-fallback.h \
-    $(wildcard include/config/GENERIC_ATOMIC64) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/atomic/atomic-long.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/atomic/atomic-instrumented.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/gfp_types.h \
-    $(wildcard include/config/KASAN_HW_TAGS) \
-    $(wildcard include/config/SLAB_OBJ_EXT) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/numa.h \
-    $(wildcard include/config/NUMA_KEEP_MEMINFO) \
-    $(wildcard include/config/HAVE_ARCH_NODE_DEV_GROUP) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/nodemask.h \
-    $(wildcard include/config/HIGHMEM) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/nodemask_types.h \
-    $(wildcard include/config/NODES_SHIFT) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/random.h \
-    $(wildcard include/config/VMGENID) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/list.h \
-    $(wildcard include/config/LIST_HARDENED) \
-    $(wildcard include/config/DEBUG_LIST) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/poison.h \
-    $(wildcard include/config/ILLEGAL_POINTER_VALUE) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/random.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/ioctl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/ioctl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/ioctl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/ioctl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/irqnr.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/irqnr.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/frame.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/page.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/page_64.h \
-    $(wildcard include/config/DEBUG_VIRTUAL) \
-    $(wildcard include/config/X86_VSYSCALL_EMULATION) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/range.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/memory_model.h \
-    $(wildcard include/config/FLATMEM) \
-    $(wildcard include/config/SPARSEMEM_VMEMMAP) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/pfn.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/getorder.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/special_insns.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/irqflags.h \
-    $(wildcard include/config/IRQSOFF_TRACER) \
-    $(wildcard include/config/PREEMPT_TRACER) \
-    $(wildcard include/config/DEBUG_IRQFLAGS) \
-    $(wildcard include/config/TRACE_IRQFLAGS_SUPPORT) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/irqflags_types.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/irqflags.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/fpu/types.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/vmxfeatures.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/vdso/processor.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/shstk.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/personality.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/personality.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/math64.h \
-    $(wildcard include/config/ARCH_SUPPORTS_INT128) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/math64.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/thread_info.h \
-    $(wildcard include/config/ARCH_HAS_PREEMPT_LAZY) \
-    $(wildcard include/config/HAVE_ARCH_WITHIN_STACK_FRAMES) \
-    $(wildcard include/config/SH) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/restart_block.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/thread_info.h \
-    $(wildcard include/config/X86_FRED) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cpufeature.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/asm/cpufeaturemasks.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/preempt.h \
-    $(wildcard include/config/PREEMPT_COUNT) \
-    $(wildcard include/config/TRACE_PREEMPT_TOGGLE) \
-    $(wildcard include/config/PREEMPT_NONE) \
-    $(wildcard include/config/PREEMPT_VOLUNTARY) \
-    $(wildcard include/config/PREEMPT) \
-    $(wildcard include/config/PREEMPT_LAZY) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/preempt.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/smp_types.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/llist.h \
-    $(wildcard include/config/ARCH_HAVE_NMI_SAFE_CMPXCHG) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/pid_types.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/sem_types.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/shm.h \
@@ -532,24 +575,7 @@ deps_Project4_part2.o := \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/latencytop.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/prio.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/types.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/signal_types.h \
-    $(wildcard include/config/OLD_SIGACTION) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/signal.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/signal.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/signal.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/signal-defs.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/siginfo.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/siginfo.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/spinlock.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bottom_half.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/lockdep.h \
-    $(wildcard include/config/DEBUG_LOCKING_API_SELFTESTS) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/smp.h \
-    $(wildcard include/config/UP_LATE_INIT) \
-    $(wildcard include/config/CSD_LOCK_WAIT_DEBUG) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/smp.h \
-    $(wildcard include/config/DEBUG_NMI_SELFTEST) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/cpumask.h \
   /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/asm/mmiowb.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/mmiowb.h \
     $(wildcard include/config/MMIOWB) \
@@ -601,7 +627,6 @@ deps_Project4_part2.o := \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/task_io_accounting.h \
     $(wildcard include/config/TASK_IO_ACCOUNTING) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/posix-timers_types.h \
-    $(wildcard include/config/POSIX_TIMERS) \
   /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/rseq.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/seqlock_types.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/kcsan.h \
@@ -626,23 +651,65 @@ deps_Project4_part2.o := \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/mutex.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/debug_locks.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/workqueue_types.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/module.h \
-    $(wildcard include/config/SYSFS) \
-    $(wildcard include/config/MODULES_TREE_LOOKUP) \
-    $(wildcard include/config/STACKTRACE_BUILD_ID) \
-    $(wildcard include/config/ARCH_USES_CFI_TRAPS) \
-    $(wildcard include/config/MODULE_SIG) \
-    $(wildcard include/config/KALLSYMS) \
-    $(wildcard include/config/TREE_SRCU) \
-    $(wildcard include/config/BPF_EVENTS) \
-    $(wildcard include/config/DEBUG_INFO_BTF_MODULES) \
-    $(wildcard include/config/EVENT_TRACING) \
-    $(wildcard include/config/MODULE_UNLOAD) \
-    $(wildcard include/config/CONSTRUCTORS) \
-    $(wildcard include/config/FUNCTION_ERROR_INJECTION) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/stat.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/stat.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/stat.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/jobctl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/task.h \
+    $(wildcard include/config/HAVE_EXIT_THREAD) \
+    $(wildcard include/config/ARCH_WANTS_DYNAMIC_TASK_STRUCT) \
+    $(wildcard include/config/HAVE_ARCH_THREAD_STRUCT_WHITELIST) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/refcount.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/uaccess.h \
+    $(wildcard include/config/ARCH_HAS_SUBPAGE_FAULTS) \
+    $(wildcard include/config/HARDENED_USERCOPY) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/fault-inject-usercopy.h \
+    $(wildcard include/config/FAULT_INJECTION_USERCOPY) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/nospec.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/ucopysize.h \
+    $(wildcard include/config/HARDENED_USERCOPY_DEFAULT_ON) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/uaccess.h \
+    $(wildcard include/config/CC_HAS_ASM_GOTO_OUTPUT) \
+    $(wildcard include/config/CC_HAS_ASM_GOTO_TIED_OUTPUT) \
+    $(wildcard include/config/ARCH_HAS_COPY_MC) \
+    $(wildcard include/config/X86_INTEL_USERCOPY) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/mm_types.h \
+    $(wildcard include/config/HAVE_ALIGNED_STRUCT_PAGE) \
+    $(wildcard include/config/HUGETLB_PMD_PAGE_TABLE_SHARING) \
+    $(wildcard include/config/SLAB_FREELIST_HARDENED) \
+    $(wildcard include/config/USERFAULTFD) \
+    $(wildcard include/config/ANON_VMA_NAME) \
+    $(wildcard include/config/PER_VMA_LOCK) \
+    $(wildcard include/config/SWAP) \
+    $(wildcard include/config/HAVE_ARCH_COMPAT_MMAP_BASES) \
+    $(wildcard include/config/MEMBARRIER) \
+    $(wildcard include/config/FUTEX_PRIVATE_HASH) \
+    $(wildcard include/config/AIO) \
+    $(wildcard include/config/MMU_NOTIFIER) \
+    $(wildcard include/config/TRANSPARENT_HUGEPAGE) \
+    $(wildcard include/config/SPLIT_PMD_PTLOCKS) \
+    $(wildcard include/config/HUGETLB_PAGE) \
+    $(wildcard include/config/IOMMU_MM_DATA) \
+    $(wildcard include/config/KSM) \
+    $(wildcard include/config/LRU_GEN_WALKS_MMU) \
+    $(wildcard include/config/MM_ID) \
+    $(wildcard include/config/CORE_DUMP_DEFAULT_ELF_HEADERS) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/auxvec.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/auxvec.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/auxvec.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/kref.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rbtree.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/maple_tree.h \
+    $(wildcard include/config/MAPLE_RCU_DISABLED) \
+    $(wildcard include/config/DEBUG_MAPLE_TREE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rwsem.h \
+    $(wildcard include/config/RWSEM_SPIN_ON_OWNER) \
+    $(wildcard include/config/DEBUG_RWSEMS) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/completion.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/swait.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/wait.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/uprobes.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/timer.h \
+    $(wildcard include/config/DEBUG_OBJECTS_TIMERS) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/ktime.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/jiffies.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/time.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/time64.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/vdso/time64.h \
@@ -666,14 +733,45 @@ deps_Project4_part2.o := \
     $(wildcard include/config/DEBUG_VM_PGFLAGS) \
   /usr/src/linux-headers-6.17.0-22-generic/include/vdso/time32.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/vdso/time.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/uidgid.h \
-    $(wildcard include/config/MULTIUSER) \
-    $(wildcard include/config/USER_NS) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/highuid.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/buildid.h \
-    $(wildcard include/config/VMCORE_INFO) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/kmod.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/umh.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/jiffies.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/generated/timeconst.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/ktime.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/timekeeping.h \
+    $(wildcard include/config/POSIX_AUX_CLOCKS) \
+    $(wildcard include/config/GENERIC_CMOS_UPDATE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/clocksource_ids.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/debugobjects.h \
+    $(wildcard include/config/DEBUG_OBJECTS) \
+    $(wildcard include/config/DEBUG_OBJECTS_FREE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/seqlock.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/uprobes.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/notifier.h \
+    $(wildcard include/config/TREE_SRCU) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/srcu.h \
+    $(wildcard include/config/TINY_SRCU) \
+    $(wildcard include/config/NEED_SRCU_NMI_SAFE) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/workqueue.h \
+    $(wildcard include/config/DEBUG_OBJECTS_WORK) \
+    $(wildcard include/config/FREEZER) \
+    $(wildcard include/config/SYSFS) \
+    $(wildcard include/config/WQ_WATCHDOG) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcu_segcblist.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/srcutree.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcu_node_tree.h \
+    $(wildcard include/config/RCU_FANOUT) \
+    $(wildcard include/config/RCU_FANOUT_LEAF) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/page-flags-layout.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/generated/bounds.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/percpu_counter.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/mmu.h \
+    $(wildcard include/config/MODIFY_LDT_SYSCALL) \
+    $(wildcard include/config/ADDRESS_MASKING) \
+    $(wildcard include/config/BROADCAST_TLB_FLUSH) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/mmap_lock.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/mm.h \
+    $(wildcard include/config/MMU_LAZY_TLB_REFCOUNT) \
+    $(wildcard include/config/ARCH_HAS_MEMBARRIER_CALLBACKS) \
+    $(wildcard include/config/ARCH_HAS_SYNC_CORE_BEFORE_USERMODE) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/gfp.h \
     $(wildcard include/config/ZONE_DMA) \
     $(wildcard include/config/ZONE_DMA32) \
@@ -687,11 +785,7 @@ deps_Project4_part2.o := \
     $(wildcard include/config/ZSMALLOC) \
     $(wildcard include/config/UNACCEPTED_MEMORY) \
     $(wildcard include/config/IOMMU_SUPPORT) \
-    $(wildcard include/config/SWAP) \
-    $(wildcard include/config/HUGETLB_PAGE) \
-    $(wildcard include/config/TRANSPARENT_HUGEPAGE) \
     $(wildcard include/config/LRU_GEN_STATS) \
-    $(wildcard include/config/LRU_GEN_WALKS_MMU) \
     $(wildcard include/config/MEMORY_FAILURE) \
     $(wildcard include/config/PAGE_EXTENSION) \
     $(wildcard include/config/DEFERRED_STRUCT_PAGE_INIT) \
@@ -700,93 +794,8 @@ deps_Project4_part2.o := \
     $(wildcard include/config/SPARSEMEM_VMEMMAP_PREINIT) \
     $(wildcard include/config/HAVE_ARCH_PFN_VALID) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/list_nulls.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/wait.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/seqlock.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/pageblock-flags.h \
     $(wildcard include/config/HUGETLB_PAGE_SIZE_VARIABLE) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/page-flags-layout.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/generated/bounds.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/mm_types.h \
-    $(wildcard include/config/HAVE_ALIGNED_STRUCT_PAGE) \
-    $(wildcard include/config/HUGETLB_PMD_PAGE_TABLE_SHARING) \
-    $(wildcard include/config/SLAB_FREELIST_HARDENED) \
-    $(wildcard include/config/USERFAULTFD) \
-    $(wildcard include/config/ANON_VMA_NAME) \
-    $(wildcard include/config/PER_VMA_LOCK) \
-    $(wildcard include/config/HAVE_ARCH_COMPAT_MMAP_BASES) \
-    $(wildcard include/config/MEMBARRIER) \
-    $(wildcard include/config/FUTEX_PRIVATE_HASH) \
-    $(wildcard include/config/AIO) \
-    $(wildcard include/config/MMU_NOTIFIER) \
-    $(wildcard include/config/SPLIT_PMD_PTLOCKS) \
-    $(wildcard include/config/IOMMU_MM_DATA) \
-    $(wildcard include/config/KSM) \
-    $(wildcard include/config/MM_ID) \
-    $(wildcard include/config/CORE_DUMP_DEFAULT_ELF_HEADERS) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/auxvec.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/auxvec.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/auxvec.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/kref.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/refcount.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rbtree.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcupdate.h \
-    $(wildcard include/config/TINY_RCU) \
-    $(wildcard include/config/RCU_STRICT_GRACE_PERIOD) \
-    $(wildcard include/config/RCU_LAZY) \
-    $(wildcard include/config/RCU_STALL_COMMON) \
-    $(wildcard include/config/KVM_XFER_TO_GUEST_WORK) \
-    $(wildcard include/config/RCU_NOCB_CPU) \
-    $(wildcard include/config/TASKS_RCU_GENERIC) \
-    $(wildcard include/config/TASKS_RUDE_RCU) \
-    $(wildcard include/config/TREE_RCU) \
-    $(wildcard include/config/DEBUG_OBJECTS_RCU_HEAD) \
-    $(wildcard include/config/PROVE_RCU) \
-    $(wildcard include/config/ARCH_WEAK_RELEASE_ACQUIRE) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/context_tracking_irq.h \
-    $(wildcard include/config/CONTEXT_TRACKING_IDLE) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcutree.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/maple_tree.h \
-    $(wildcard include/config/MAPLE_RCU_DISABLED) \
-    $(wildcard include/config/DEBUG_MAPLE_TREE) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rwsem.h \
-    $(wildcard include/config/RWSEM_SPIN_ON_OWNER) \
-    $(wildcard include/config/DEBUG_RWSEMS) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/completion.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/swait.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/uprobes.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/timer.h \
-    $(wildcard include/config/DEBUG_OBJECTS_TIMERS) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/ktime.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/jiffies.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/jiffies.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/generated/timeconst.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/vdso/ktime.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/timekeeping.h \
-    $(wildcard include/config/POSIX_AUX_CLOCKS) \
-    $(wildcard include/config/GENERIC_CMOS_UPDATE) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/clocksource_ids.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/debugobjects.h \
-    $(wildcard include/config/DEBUG_OBJECTS) \
-    $(wildcard include/config/DEBUG_OBJECTS_FREE) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/uprobes.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/notifier.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/srcu.h \
-    $(wildcard include/config/TINY_SRCU) \
-    $(wildcard include/config/NEED_SRCU_NMI_SAFE) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/workqueue.h \
-    $(wildcard include/config/DEBUG_OBJECTS_WORK) \
-    $(wildcard include/config/FREEZER) \
-    $(wildcard include/config/WQ_WATCHDOG) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcu_segcblist.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/srcutree.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcu_node_tree.h \
-    $(wildcard include/config/RCU_FANOUT) \
-    $(wildcard include/config/RCU_FANOUT_LEAF) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/percpu_counter.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/mmu.h \
-    $(wildcard include/config/MODIFY_LDT_SYSCALL) \
-    $(wildcard include/config/ADDRESS_MASKING) \
-    $(wildcard include/config/BROADCAST_TLB_FLUSH) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/page-flags.h \
     $(wildcard include/config/PAGE_IDLE_FLAG) \
     $(wildcard include/config/ARCH_USES_PG_ARCH_2) \
@@ -819,125 +828,10 @@ deps_Project4_part2.o := \
   /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/topology.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/cpu_smt.h \
     $(wildcard include/config/HOTPLUG_SMT) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sysctl.h \
-    $(wildcard include/config/SYSCTL) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/sysctl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/elf.h \
-    $(wildcard include/config/ARCH_HAVE_EXTRA_ELF_NOTES) \
-    $(wildcard include/config/ARCH_USE_GNU_PROPERTY) \
-    $(wildcard include/config/ARCH_HAVE_ELF_PROT) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/elf.h \
-    $(wildcard include/config/X86_X32_ABI) \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/ia32.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/compat.h \
-    $(wildcard include/config/ARCH_HAS_SYSCALL_WRAPPER) \
-    $(wildcard include/config/COMPAT_OLD_SIGACTION) \
-    $(wildcard include/config/HARDENED_USERCOPY) \
-    $(wildcard include/config/ODD_RT_SIGACTION) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sem.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/sem.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/ipc.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/ipc.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/ipcbuf.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/ipcbuf.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/sembuf.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/socket.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/socket.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/socket.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/sockios.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/sockios.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/sockios.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/uio.h \
-    $(wildcard include/config/ARCH_HAS_COPY_MC) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/ucopysize.h \
-    $(wildcard include/config/HARDENED_USERCOPY_DEFAULT_ON) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/uio.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/socket.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/if.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/libc-compat.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/hdlc/ioctl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/fs.h \
-    $(wildcard include/config/FANOTIFY_ACCESS_PERMISSIONS) \
-    $(wildcard include/config/READ_ONLY_THP_FOR_FS) \
-    $(wildcard include/config/FS_POSIX_ACL) \
-    $(wildcard include/config/CGROUP_WRITEBACK) \
-    $(wildcard include/config/IMA) \
-    $(wildcard include/config/FILE_LOCKING) \
-    $(wildcard include/config/FSNOTIFY) \
-    $(wildcard include/config/FS_ENCRYPTION) \
-    $(wildcard include/config/FS_VERITY) \
-    $(wildcard include/config/EPOLL) \
-    $(wildcard include/config/UNICODE) \
-    $(wildcard include/config/QUOTA) \
-    $(wildcard include/config/FS_DAX) \
-    $(wildcard include/config/BLOCK) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/vfsdebug.h \
-    $(wildcard include/config/DEBUG_VFS) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/wait_bit.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/kdev_t.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/kdev_t.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/dcache.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rculist.h \
-    $(wildcard include/config/PROVE_RCU_LIST) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rculist_bl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/list_bl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bit_spinlock.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/lockref.h \
-    $(wildcard include/config/ARCH_USE_CMPXCHG_LOCKREF) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/stringhash.h \
-    $(wildcard include/config/DCACHE_WORD_ACCESS) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/hash.h \
-    $(wildcard include/config/HAVE_ARCH_HASH) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/path.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/list_lru.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/shrinker.h \
-    $(wildcard include/config/SHRINKER_DEBUG) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/xarray.h \
-    $(wildcard include/config/XARRAY_MULTI) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/mm.h \
-    $(wildcard include/config/MMU_LAZY_TLB_REFCOUNT) \
-    $(wildcard include/config/ARCH_HAS_MEMBARRIER_CALLBACKS) \
-    $(wildcard include/config/ARCH_HAS_SYNC_CORE_BEFORE_USERMODE) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/sync_core.h \
     $(wildcard include/config/ARCH_HAS_PREPARE_SYNC_CORE_CMD) \
   /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/sync_core.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/coredump.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/radix-tree.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/pid.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/capability.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/capability.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/semaphore.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/fcntl.h \
-    $(wildcard include/config/ARCH_32BIT_OFF_T) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/fcntl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/fcntl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/fcntl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/openat2.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/migrate_mode.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/percpu-rwsem.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcuwait.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/signal.h \
-    $(wildcard include/config/SCHED_AUTOGROUP) \
-    $(wildcard include/config/BSD_PROCESS_ACCT) \
-    $(wildcard include/config/TASKSTATS) \
-    $(wildcard include/config/STACK_GROWSUP) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/signal.h \
-    $(wildcard include/config/DYNAMIC_SIGFRAME) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/jobctl.h \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/task.h \
-    $(wildcard include/config/HAVE_EXIT_THREAD) \
-    $(wildcard include/config/ARCH_WANTS_DYNAMIC_TASK_STRUCT) \
-    $(wildcard include/config/HAVE_ARCH_THREAD_STRUCT_WHITELIST) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/uaccess.h \
-    $(wildcard include/config/ARCH_HAS_SUBPAGE_FAULTS) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/fault-inject-usercopy.h \
-    $(wildcard include/config/FAULT_INJECTION_USERCOPY) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/nospec.h \
-  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/uaccess.h \
-    $(wildcard include/config/CC_HAS_ASM_GOTO_OUTPUT) \
-    $(wildcard include/config/CC_HAS_ASM_GOTO_TIED_OUTPUT) \
-    $(wildcard include/config/X86_INTEL_USERCOPY) \
-  /usr/src/linux-headers-6.17.0-22-generic/include/linux/mmap_lock.h \
   /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/smap.h \
   /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/extable.h \
     $(wildcard include/config/BPF_JIT) \
@@ -975,16 +869,27 @@ deps_Project4_part2.o := \
   /usr/src/linux-headers-6.17.0-22-generic/include/asm-generic/access_ok.h \
     $(wildcard include/config/ALTERNATE_USER_ADDRESS_SPACE) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/cred.h \
+    $(wildcard include/config/MULTIUSER) \
+    $(wildcard include/config/USER_NS) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/capability.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/capability.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/uidgid.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/highuid.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/key.h \
     $(wildcard include/config/KEY_NOTIFICATIONS) \
     $(wildcard include/config/NET) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sysctl.h \
+    $(wildcard include/config/SYSCTL) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/sysctl.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/assoc_array.h \
     $(wildcard include/config/ASSOCIATIVE_ARRAY) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/sched/user.h \
+    $(wildcard include/config/EPOLL) \
     $(wildcard include/config/VFIO_PCI_ZDEV_KVM) \
     $(wildcard include/config/IOMMUFD) \
     $(wildcard include/config/WATCH_QUEUE) \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/ratelimit.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/pid.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/posix-timers.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/alarmtimer.h \
     $(wildcard include/config/RTC_CLASS) \
@@ -995,6 +900,101 @@ deps_Project4_part2.o := \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/hrtimer_defs.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/timerqueue.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcuref.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/module.h \
+    $(wildcard include/config/MODULES_TREE_LOOKUP) \
+    $(wildcard include/config/STACKTRACE_BUILD_ID) \
+    $(wildcard include/config/ARCH_USES_CFI_TRAPS) \
+    $(wildcard include/config/MODULE_SIG) \
+    $(wildcard include/config/KALLSYMS) \
+    $(wildcard include/config/BPF_EVENTS) \
+    $(wildcard include/config/DEBUG_INFO_BTF_MODULES) \
+    $(wildcard include/config/EVENT_TRACING) \
+    $(wildcard include/config/MODULE_UNLOAD) \
+    $(wildcard include/config/CONSTRUCTORS) \
+    $(wildcard include/config/FUNCTION_ERROR_INJECTION) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/stat.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/stat.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/stat.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/buildid.h \
+    $(wildcard include/config/VMCORE_INFO) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/kmod.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/umh.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/elf.h \
+    $(wildcard include/config/ARCH_HAVE_EXTRA_ELF_NOTES) \
+    $(wildcard include/config/ARCH_USE_GNU_PROPERTY) \
+    $(wildcard include/config/ARCH_HAVE_ELF_PROT) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/elf.h \
+    $(wildcard include/config/X86_X32_ABI) \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/asm/ia32.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/compat.h \
+    $(wildcard include/config/ARCH_HAS_SYSCALL_WRAPPER) \
+    $(wildcard include/config/COMPAT_OLD_SIGACTION) \
+    $(wildcard include/config/ODD_RT_SIGACTION) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/sem.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/sem.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/ipc.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/ipc.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/ipcbuf.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/ipcbuf.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/uapi/asm/sembuf.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/socket.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/socket.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/socket.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/sockios.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/sockios.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/sockios.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/uio.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/uio.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/socket.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/if.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/libc-compat.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/hdlc/ioctl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/fs.h \
+    $(wildcard include/config/FANOTIFY_ACCESS_PERMISSIONS) \
+    $(wildcard include/config/READ_ONLY_THP_FOR_FS) \
+    $(wildcard include/config/FS_POSIX_ACL) \
+    $(wildcard include/config/CGROUP_WRITEBACK) \
+    $(wildcard include/config/IMA) \
+    $(wildcard include/config/FILE_LOCKING) \
+    $(wildcard include/config/FSNOTIFY) \
+    $(wildcard include/config/FS_ENCRYPTION) \
+    $(wildcard include/config/FS_VERITY) \
+    $(wildcard include/config/UNICODE) \
+    $(wildcard include/config/QUOTA) \
+    $(wildcard include/config/FS_DAX) \
+    $(wildcard include/config/BLOCK) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/vfsdebug.h \
+    $(wildcard include/config/DEBUG_VFS) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/wait_bit.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/kdev_t.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/kdev_t.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/dcache.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rculist_bl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/list_bl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/bit_spinlock.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/lockref.h \
+    $(wildcard include/config/ARCH_USE_CMPXCHG_LOCKREF) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/stringhash.h \
+    $(wildcard include/config/DCACHE_WORD_ACCESS) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/hash.h \
+    $(wildcard include/config/HAVE_ARCH_HASH) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/path.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/list_lru.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/shrinker.h \
+    $(wildcard include/config/SHRINKER_DEBUG) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/xarray.h \
+    $(wildcard include/config/XARRAY_MULTI) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/radix-tree.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/semaphore.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/fcntl.h \
+    $(wildcard include/config/ARCH_32BIT_OFF_T) \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/fcntl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/arch/x86/include/generated/uapi/asm/fcntl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/asm-generic/fcntl.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/uapi/linux/openat2.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/migrate_mode.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/percpu-rwsem.h \
+  /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcuwait.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/rcu_sync.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/delayed_call.h \
   /usr/src/linux-headers-6.17.0-22-generic/include/linux/uuid.h \
