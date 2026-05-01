@@ -3,14 +3,10 @@
    #include <linux/sched.h>
    #include <linux/module.h>
    #include <linux/mm.h>
-   // #include -isystem "/usr/src/linux-headers-6.17.0-22-generic/include"
-   // #include <linux/mm.h>
 
-//   #include <linux/mm_types.h>
    void print_range(struct task_struct* ts);
   static int pid_arg =1;
 
-//   struct mm_struct *mm = get_task_mm(task);
   struct vm_area_struct *vma;
   unsigned long vm_space =0;
   struct vma_iterator iter;
@@ -37,25 +33,8 @@ mmap_read_lock(mm);
   }
   mmap_read_unlock(mm);
   long range = end_bound-start_bound;
-  printk(KERN_INFO "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
-//   for(task=ts;task!=&init_task;task=task->parent)
+  printk(KERN_ALERT "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
 
-//    {
-//    switch(task->__state){
-//     case 0:
-//     print_state=    "TASK_RUNNING"   ;
-//     break;
-//     case 1:
-//     print_state= "TASK_INTERRUPTIBLE" ;
-//     break;
-//     default:
-//     print_state="error";
-//    }
-//    printk(KERN_INFO "heres a task named %s with PID [%d] whose state is %s\n",task->comm , task->pid,print_state);
-//    break;   
-// }
-
-   
 }
 
   int init_module(void)
