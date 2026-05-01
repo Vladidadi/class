@@ -95,6 +95,43 @@ mmap_read_lock(mm);
    return present;
 }
 
+  void print_range(struct task_struct* ts){
+     struct task_struct *task = ts;
+   printk(KERN_INFO "Entered loop in part3");
+   struct mm_struct *mm = get_task_mm(task);
+mmap_read_lock(mm);
+      //  char *print_state;
+   VMA_ITERATOR(iter,task->mm,0);
+  for_each_vma(iter,vma){
+   if(vma->vm_start < start_bound) {start_bound=vma->vm_start;}
+   if(vma->vm_end > end_bound) {end_bound=vma->vm_end;}
+   printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
+
+
+  }
+  mmap_read_unlock(mm);
+  long range = end_bound-start_bound;
+  printk(KERN_INFO "\nRange from %lx to %lx, with a total size of %lx",start_bound,end_bound,range);
+//   for(task=ts;task!=&init_task;task=task->parent)
+
+//    {
+//    switch(task->__state){
+//     case 0:
+//     print_state=    "TASK_RUNNING"   ;
+//     break;
+//     case 1:
+//     print_state= "TASK_INTERRUPTIBLE" ;
+//     break;
+//     default:
+//     print_state="error";
+//    }
+//    printk(KERN_INFO "heres a task named %s with PID [%d] whose state is %s\n",task->comm , task->pid,print_state);
+//    break;   
+// }
+
+   
+}
+
   int init_module(void)
   {
 
@@ -114,6 +151,8 @@ bool query_in_range=0;
  
  
    }
+      print_range(iter);
+
         if(query_in_range){
       printk(KERN_INFO "\n\n The address is in the range of the vma\n\n");
          
@@ -128,6 +167,13 @@ bool query_in_range=0;
    
    void cleanup_module(void)
    {
+      //    VMA_ITERATOR(iter,task->mm,0);
+//   for_each_vma(iter,vma){
+//    if(vma->vm_start < start_bound) {start_bound=vma->vm_start;}
+//    if(vma->vm_end > end_bound) {end_bound=vma->vm_end;}
+//    printk(KERN_INFO "heres a vma: start %lx      end %lx\n",   vma->vm_start,   vma->vm_end);
+
+   
    printk(KERN_INFO "End VA STATUS\n");
    }
 
