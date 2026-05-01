@@ -39,6 +39,8 @@ static int find_in_range(struct task_struct *task)
 
 	mmap_read_lock(mm);
 	vma = find_vma(mm, query);
+		pr_info("VMA: %lx-%lx\n", vma->vm_start,vma->vm_end);
+
 	if (vma && query >= vma->vm_start && query < vma->vm_end)
 		in_vma_range = 1;
 	mmap_read_unlock(mm);
