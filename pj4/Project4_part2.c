@@ -33,18 +33,23 @@
       pte_t *pte;//=pte_offset_kernel(pmd,addy);
 
       pgd=pgd_offset(mm,addy);
-      if (pgd_none(*pgd) || pgd_bad(*pgd))
+      if (pgd_none(*pgd) || pgd_bad(*pgd)){
          return 0;
+      }
       p4d=p4d_offset(pgd,addy);
-      if (p4d_none(*p4d) || p4d_bad(*p4d))
+      if (p4d_none(*p4d) || p4d_bad(*p4d)){
          return 0;
+      }
         pud=pud_offset(p4d,addy);
-      if (pud_none(*pud) || pud_bad(*pud))
+      if (pud_none(*pud) || pud_bad(*pud)){
          return 0;
-         pmd=pmd_offset(pud,addy);
-      if (pmd_none(*pmd) || pmd_bad(*pmd))
-         return 0;
-      return pte_present(*pte);
+         }
+            pmd=pmd_offset(pud,addy);
+      if (pmd_none(*pmd) || pmd_bad(*pmd)){
+
+    return 0;
+         }
+            return pte_present(*pte);
    }
    
 
