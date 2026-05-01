@@ -29,7 +29,7 @@
       if((mm ))
 {
 
-  struct vm_area_struct *vmpage;
+  long unsigned int vmpage;
       int i=0;
       pgd_t *pgd ;//=pgd_offset(mm,addy);
       p4d_t *p4d;//=p4d_offset(pgd,addy);
