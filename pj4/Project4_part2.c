@@ -40,6 +40,7 @@
       while(vma){
          for (vmpage=vma->vm_start,i=1;vmpage < vma->vm_end;vmpage += PAGE_SIZE,i++){
              pgd=pgd_offset(mm,addy);
+             printk(KERN_INFO "\n counter: %lx\n",vmpage);
       if (!(pgd_none(*pgd) || pgd_bad(*pgd))){
          // return 0;
          p4d=p4d_offset(pgd,addy);
